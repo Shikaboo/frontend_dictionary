@@ -1,6 +1,7 @@
 import { useRef, useCallback, useMemo, useReducer, createContext } from 'react'
 import { encyclopedia,  Reduce } from './DB';
 import {Route, Routes} from 'react-router-dom';
+import './index.css'
 import './App.css'
 import Main from './page/main';
 import Write from './page/write';
@@ -13,7 +14,7 @@ function App() {
   const [state, dispatch] = useReducer(Reduce, encyclopedia);
   const {datas} = state;
   const {word, content, category} = state.inputs;
-  const userId = useRef(21);
+  const userId = useRef(22);
 
   const createWord = useCallback((word, content, category)=>{
     const createData = 

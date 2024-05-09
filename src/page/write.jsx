@@ -30,23 +30,24 @@ const Write = ()=>{
     return(
         <>
         <div className="write">
-            <div className="selec box">
-                <label>분류</label>
-                <select name="category" value={category} onChange={onChangeTxt}>
-                    <option value={'html'}>html</option>
-                    <option value={'css'}>css</option>
-                    <option value={'javascript'}>javascript</option>
-                    <option value={'node'}>node</option>
-                    <option value={'react'}>react</option>
-                </select>
-            </div>
-            <div className="txt box">
-                <label>단어</label>
-                <input type="text" name="word" value={word || ''} onChange={onChangeTxt}></input>
+            <div className="selecPlusTxt">
+                <div className="selec box">
+                    <label>분류</label>
+                    <select name="category" value={category} onChange={onChangeTxt}>
+                        <option value={'html'}>html</option>
+                        <option value={'css'}>css</option>
+                        <option value={'javascript'}>javascript</option>
+                        <option value={'node'}>node</option>
+                        <option value={'react'}>react</option>
+                    </select>
+                </div>
+                <div className="txt box">
+                    <label>단어</label>
+                    <input type="text" name="word" value={word || ''} onChange={onChangeTxt}></input>
+                </div>
             </div>
             <div className="txtarea box">
-                <label>설명</label>
-                <textarea type="text" name="content" value={content || ''} onChange={onChangeTxt}></textarea>
+                <textarea type="text" name="content" value={content || ''} onChange={onChangeTxt} placeholder="단어에 관련된 설명을 작성해주세요!"></textarea>
             </div>
             <button onClick={createBtn}>저장</button>
         </div>
